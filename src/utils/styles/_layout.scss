@@ -20,7 +20,9 @@ body {
   margin: .8rem 0;
 }
 
-.Content .Text {
+.Content .Text,
+.Contact .Text,
+.Event .Text {
   display: grid;
   grid-template-columns: minmax(100px, 20%) 1fr;
   margin: .8rem 0;
