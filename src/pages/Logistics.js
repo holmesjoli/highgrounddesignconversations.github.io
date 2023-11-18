@@ -1,4 +1,4 @@
-import Navigation from "../components/Navigation";
+import Main from "../components/Main";
 
 import { eventManager, gateCode } from "../utils/global";
 
@@ -16,14 +16,13 @@ const logistics = [{header: "General Behavior", p: "Since we are having 30 peopl
 
 export default function Logistics() {
     return(
-        <div>
-            <Navigation />
-                {logistics.map((d, i) => 
-                <div key={i}>
-                    <h4>{d.header}</h4>
-                    <p>{d.p}</p>
-                </div>)}
-        </div>
+        <Main >
+            {logistics.map((d, i) => 
+            <div className="Text" key={i}>
+                <h4>{d.header}</h4>
+                <p>{d.p}</p>
+            </div>)}
+        </Main>
     )
 }
 
