@@ -4,7 +4,7 @@ import Content from "./Content";
 
 export default function Main({pageName, children}) {
     return(
-        <div>
+        <div className={pageName}>
             <Navigation />
             <Content>
                 {children}
