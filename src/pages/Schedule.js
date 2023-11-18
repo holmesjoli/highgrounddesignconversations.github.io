@@ -3,7 +3,7 @@ import Main from "../components/Main";
 export default function Schedule() {
     return(
         <div>
-            <Main />
+            <Main pageName="Schedule"/>
         </div>
     )
 }

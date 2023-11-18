@@ -1,12 +1,15 @@
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 
-export default function Main({children}) {
+export default function Main({pageName, children}) {
     return(
-        <div className="Main">
+        <div>
             <Navigation />
-            <div className="Content">
-                {children}
+            <div className="Main">
+                <div className="Content">
+                    {/* <h3>{pageName}</h3> */}
+                    {children}
+                </div>
             </div>
             <Footer/>
         </div>
