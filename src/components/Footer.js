@@ -13,7 +13,7 @@ export default function Footer() {
                     <p>{eventManager.managerName} cell</p>
                 </div>
             </div>
-            <div className="Address">
+            <div className="Event">
                 <div className="Text">
                     <h5>171 County Road 74 Santa Fe, NM 85706</h5>
                     <p>Event Address</p>
