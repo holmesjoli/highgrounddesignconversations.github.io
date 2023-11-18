@@ -18,7 +18,8 @@ export default function Logistics() {
     return(
         <div>
             <Navigation />
-                {logistics.map((d, i) => <div>
+                {logistics.map((d, i) => 
+                <div key={i}>
                     <h4>{d.header}</h4>
                     <p>{d.p}</p>
                 </div>)}

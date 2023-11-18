@@ -13,8 +13,9 @@ import './utils/styles/styles.scss'
 // Pages
 import Home from './pages/Home';
 import Schedule from './pages/Schedule';
-import Logistics from "./pages/Logistics";
-import Resources from "./pages/Resources";
+import Logistics from './pages/Logistics';
+import Location from './pages/Location';
+import Resources from './pages/Resources';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,7 @@ root.render(
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/Schedule" element={<Schedule />} />
+      <Route path="/Location" element={<Location />} />
       <Route path="/Logistics" element={<Logistics />} />
       <Route path="/Resources" element={<Resources />} />
     </Routes>
