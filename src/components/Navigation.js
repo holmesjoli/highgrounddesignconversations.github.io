@@ -13,16 +13,16 @@ export default function Navigation() {
             <div className="Navigation_links">
                 <ul id="Navigation_list">
                     <li className="Navigation_link">
-                        <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Home</NavLink>
+                        <h3><NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Home</NavLink></h3>
                     </li>
                     <li className="Navigation_link">
-                        <NavLink to="/Schedule" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Schedule</NavLink>
+                        <h3><NavLink to="/Schedule" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Schedule</NavLink></h3>
                     </li>
                     <li className="Navigation_link">
-                        <NavLink to="/Logistics" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Logistics</NavLink>
+                        <h3><NavLink to="/Logistics" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Logistics</NavLink></h3>
                     </li>
                     <li className="Navigation_link">
-                        <NavLink to="/Resources" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Resources</NavLink>
+                        <h3><NavLink to="/Resources" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Resources</NavLink></h3>
                     </li>
                 </ul>
             </div>

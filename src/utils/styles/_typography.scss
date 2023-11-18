@@ -2,6 +2,14 @@
 // Imports
 @import url("https://use.typekit.net/kzk4zpy.css");
 
+@font-face {
+  font-family:"Futura PT";
+  src: url("https://use.typekit.net/kzk4zpy.css") format("opentype");
+  font-display:auto;
+  font-style:normal;
+  font-weight:400;
+}
+
 body {
   font-family: $baseFont;
   font-size: $baseFontSize;
@@ -48,6 +56,7 @@ body {
   h3 {
     font-size: 1rem;
     line-height: 1.3;
+    font-weight: bold;
   }
 
   h4 {
