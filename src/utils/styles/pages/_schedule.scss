@@ -1,0 +1,11 @@
+.Schedule .Content .Text {
+    display: grid;
+    grid-template-columns: minmax(150px, 25%)  minmax(150px, 25%) 1fr;
+    margin: .8rem 0;
+    grid-gap: 1.5rem;
+    margin: .25rem 0;
+  }
+
+.Day {
+    margin: 1rem 0;
+}

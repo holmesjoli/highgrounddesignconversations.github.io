@@ -15,7 +15,7 @@ body {
   min-height: 65vh;
 }
 
-.Content .Text:first-child {
+.Logistics .Content .Text:first-child {
   border-bottom: 1px solid $appBorderColor;
   margin: .8rem 0;
 }
@@ -27,14 +27,6 @@ body {
   grid-template-columns: minmax(100px, 20%) 1fr;
   margin: .8rem 0;
   grid-gap: 1.5rem;
-}
-
-.Schedule .Content .Text {
-  display: grid;
-  grid-template-columns: minmax(150px, 25%)  minmax(150px, 25%) 1fr;
-  margin: .8rem 0;
-  grid-gap: 1.5rem;
-  margin: .3rem 0;
 }
 
 .Text h4,
