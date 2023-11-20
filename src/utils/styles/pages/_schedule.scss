@@ -3,9 +3,12 @@
     grid-template-columns: minmax(150px, 25%)  minmax(150px, 25%) 1fr;
     margin: .8rem 0;
     grid-gap: 1.5rem;
-    margin: .25rem 0;
-  }
+}
 
 .Day {
     margin: 1rem 0;
+    border-top: .5px solid $appBorderColor;
+    // flex: 1 1 150px; /*  Stretching: */
+    // flex: 0 1 150px; /*  No stretching: */
+    margin: 5px;
 }

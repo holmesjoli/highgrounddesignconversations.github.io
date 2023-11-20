@@ -135,7 +135,7 @@ b, strong {
 }
 
 a {
-  color: $appColor;
+  color: $appColorSecondary;
   text-decoration: none;
 }
 
@@ -143,73 +143,10 @@ a:focus, a:hover {
   color: $appColorFocus;
 }
 
-table {
-  border-spacing: 0;
-  display: block;
-  overflow-x: auto;
-  text-align: left;
-  width: 100%;
-}
-
-td, th {
-  border-bottom: 0.1rem solid $appBorderColor;
-  padding: 1.2rem 1.5rem;
-}
-
-td:first-child,
-th:first-child {
-  padding-left: 0;
-}
-
-td:last-child,
-th:last-child {
-  padding-right: 0;
-}
-
-dl, ol, ul {
-  list-style: none;
-  list-style-position: outside;
-  margin: $appIndent 0 $appIndent $appIndent;
-  padding-left: 0;
-}
-
-dl dl, dl ol, dl ul, ol dl, ol ol, ol ul, ul dl, ul ol, ul ul {
-  font-size: 90%;
-  margin: $appIndent 0 $appIndent ($appIndent * 2);
-}
-
-ol {
-  list-style: decimal outside;
-}
-
-ul {
-  list-style: circle outside;
-}
-
-dd, dt, li {
-  margin-bottom: 0;
-}
-
-li + li {
-  margin-top: $appPadding;
+a.active {
+  color: $appColor;
 }
 
 img {
   max-width: 100%;
-}
-
-hr {
-  border: 0;
-  border-top: 0.1rem solid $appBorderColor;
-  margin: 3.0rem 0;
-}
-
-
-// utility classes
-.indent {
-  padding-left: $appIndent;
-}
-
-.secondary {
-color: $appColorSecondary;
 }

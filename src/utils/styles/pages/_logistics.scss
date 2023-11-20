@@ -1,0 +1,11 @@
+.Logistics .Content .Text {
+  display: grid;
+  grid-template-columns: minmax(100px, 20%) 1fr;
+  margin: .8rem 0;
+  grid-gap: 1.5rem;
+}
+
+.Logistics .Content .Text:first-child {
+  border-bottom: 1px solid $appBorderColor;
+  margin: .8rem 0;
+}
