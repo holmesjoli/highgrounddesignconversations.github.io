@@ -1,14 +1,14 @@
 .Schedule .Content .Text {
     display: grid;
-    grid-template-columns: minmax(150px, 25%)  minmax(150px, 25%) 1fr;
-    margin: .8rem 0;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    margin: .3rem 0;
     grid-gap: 1.5rem;
 }
 
 .Day {
-    margin: 1rem 0;
+    padding-bottom: $appPadding;
+    margin: auto 15rem;
     border-top: .5px solid $appBorderColor;
-    // flex: 1 1 150px; /*  Stretching: */
-    // flex: 0 1 150px; /*  No stretching: */
-    margin: 5px;
+    // margin: 5px;
 }
