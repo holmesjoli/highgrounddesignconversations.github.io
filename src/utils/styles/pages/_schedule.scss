@@ -7,8 +7,13 @@
 }
 
 .Day {
-    padding-bottom: $appPadding;
+    padding: 0 1.75rem .25rem 1.75rem;
     margin: auto 15rem;
-    border-top: .5px solid $appBorderColor;
+    // border-top: .5px solid $appBorderColor;
     // margin: 5px;
+}
+
+.Schedule .Content .Day .Text:first-child {
+    border-top: .5px solid $appBorderColor;
+    padding-top: .25rem;
 }
