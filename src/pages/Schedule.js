@@ -26,8 +26,6 @@ const schedule = {thursday: [
                   ]
 };
 
-console.log(schedule)
-
 export default function Schedule() {
     return(
         <div>

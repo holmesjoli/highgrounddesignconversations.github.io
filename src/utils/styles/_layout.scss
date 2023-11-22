@@ -30,3 +30,11 @@ body {
   margin: 0;
 }
 
+@media screen and (max-width: 480px) {
+    
+  .Content {
+    margin: auto 1rem;
+    min-height: 65vh;
+  }
+
+}

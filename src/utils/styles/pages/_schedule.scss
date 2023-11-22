@@ -8,7 +8,7 @@
 
 .Day {
     padding: 0 1.75rem .25rem 1.75rem;
-    margin: auto 15rem;
+    margin: auto 5rem;
     // border-top: .5px solid $appBorderColor;
     // margin: 5px;
 }
@@ -16,4 +16,18 @@
 .Schedule .Content .Day .Text:first-child {
     border-top: .5px solid $appBorderColor;
     padding-top: .25rem;
+}
+
+@media screen and (max-width: 480px) {
+    .Day {
+        margin: 0;
+    }
+
+    .Schedule .Content .Text {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+        margin: 0.3rem 0;
+        grid-gap: 1.5rem;
+    }
 }
