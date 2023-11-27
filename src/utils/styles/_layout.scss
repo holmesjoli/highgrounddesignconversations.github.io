@@ -11,7 +11,7 @@ body {
 
 // Wrapper
 .Content {
-  margin: auto 25rem;
+  margin: auto 20rem;
   min-height: 65vh;
 }
 
@@ -29,6 +29,19 @@ body {
   text-align: right;
   margin: 0;
 }
+
+img {
+  width: auto;
+  max-height: 15vh;
+}
+
+@media screen and (min-width: 1600px) {
+    
+  .Content {
+    margin: auto 25rem;
+  }
+}
+
 
 @media screen and (max-width: 480px) {
     

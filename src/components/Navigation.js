@@ -8,7 +8,7 @@ export default function Navigation() {
     return (
         <div className="Navigation">
             <div className="Navigation_branding">
-                <NavLink to="/">High Ground Design Conversations</NavLink>
+                <NavLink to="/"><img src="/assets/HGDC_Logo_zoomed.png"/></NavLink>
             </div>            
             <div className="Navigation_links">
                 <ul id="Navigation_list">
