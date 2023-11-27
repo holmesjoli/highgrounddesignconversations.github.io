@@ -1,0 +1,14 @@
+.Resources .Content .Suggested-Resources {
+    display: grid;
+    grid-template-columns: minmax(100px, 20%) 1fr;
+    margin: .8rem 0;
+    grid-gap: 1.5rem;
+}
+
+.Suggested-Resources .Year {
+    text-align: right;
+}
+
+.Resources .Content .Text span:nth-child(1) {
+    font-style: italic;
+}
