@@ -54,3 +54,18 @@
     color: $appColorFocus;
   }
 }
+
+@media screen and (max-width: 480px) {
+    
+  .Navigation_links {
+    flex: 0 1;
+  }
+
+  .Navigation_link {
+
+    h3 {
+      font-size: .9rem;
+      margin: $appMargin/2;
+    }
+  }
+}

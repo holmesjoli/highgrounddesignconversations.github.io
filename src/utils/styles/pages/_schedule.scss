@@ -19,15 +19,17 @@
 }
 
 @media screen and (max-width: 480px) {
-    .Day {
-        margin: 0;
-    }
 
-    .Schedule .Content .Text {
-        display: grid;
-        grid-gap: 1rem;
-        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
-        margin: 0.3rem 0;
-        grid-gap: 1.5rem;
+    .Schedule {
+
+        .Day {
+            margin: 0;
+            padding: .25rem;
+        }
+
+        .Content .Text {
+            grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+            grid-gap: 1rem;
+        }
     }
 }
