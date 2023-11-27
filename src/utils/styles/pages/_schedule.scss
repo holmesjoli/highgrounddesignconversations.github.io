@@ -9,13 +9,15 @@
 .Day {
     padding: 0 1.75rem .25rem 1.75rem;
     margin: auto 5rem;
-    // border-top: .5px solid $appBorderColor;
-    // margin: 5px;
 }
 
-.Schedule .Content .Day .Text:first-child {
+.Schedule .Content .Day .Text:nth-child(2) {
     border-top: .5px solid $appBorderColor;
     padding-top: .25rem;
+}
+
+.Schedule .Content .Day:nth-child(1) {
+    margin-top: .8rem;
 }
 
 @media screen and (max-width: 480px) {

@@ -30,7 +30,7 @@ export default function Schedule() {
     return(
         <div>
             <Main pageName="Schedule">
-            <h3>Schedule</h3>
+            {/* <h3>Schedule</h3> */}
             {Object.keys(schedule).map((d, i) => 
                 <div className="Day" key={i}>
                     {schedule[d].map((e, j) => 

@@ -2,7 +2,8 @@ import Main from "../components/Main";
 
 import { eventManager, gateCode } from "../utils/global";
 
-const logistics = [{header: "Logistics", p: ""},
+const logistics = [
+                // {header: "Logistics", p: ""},
                    {header: "General Behavior", p: "Since we are having 30 people in a VRBO designated for 12 people in a residential area, we need to keep a low profile so the neighbors do not complain and the property manager does not evict us. Out of respect for the neighbors, we need to minimize our visibility, traffic and noise. No parking on the roadside and avoid walking, hiking or running on the road."},
                    {header: "Parking", p: "Only park inside the gate and not on the road. People staying on property have parking priority. Please observe the cones and parking manager instructions. When the parking areas on property are full, parking managers will direct you to the overflow lot down the road at the intersection and you will be picked up by the shuttle."},
                    {header: "Event Description", p: "Be prepared to give a simple consistent explanation to any neighbors you encounter. We need to make it clear that HGDC is not an “event” with noisy entertainment; we're just a modest casual gathering of academic colleagues."},
@@ -20,7 +21,7 @@ export default function Logistics() {
         <Main pageName="Logistics">
             {logistics.map((d, i) => 
                 <div className="Text" key={i}>
-                    {i === 0 ? <h3>{d.header}</h3>: <h4>{d.header}</h4>}
+                    <h4>{d.header}</h4>
                     <p>{d.p}</p>
                 </div>)}
         </Main>
