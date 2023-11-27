@@ -9,6 +9,25 @@
     text-align: right;
 }
 
-.Resources .Content .Text span:nth-child(1) {
-    font-style: italic;
+.Resources .Text {
+    margin-bottom: .18rem;
+}
+
+@media screen and (max-width: 480px) {
+
+    .Resources {
+
+        .Day {
+            margin: 0;
+            padding: .25rem;
+        }
+
+        .Content .Suggested-Resources {
+            grid-template-columns: minmax(65px, 15%) 1fr;
+        }
+
+        .Resources .Text {
+            margin-bottom: .3rem;
+        }
+    }
 }

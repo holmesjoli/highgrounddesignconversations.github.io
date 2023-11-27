@@ -14,10 +14,8 @@ export default function Resources() {
                     <h4 className="Year">{d}</h4>
                     <div className="Resource">
                         {resources[d].map((e, j) => 
-                            <div className="Text" key={j}>
-                            <p><span className="italics">{e.title}</span>. {e.year}. {e.author}.</p>
-                            </div>)}
-
+                            <p className="Text" key={j}><span className="italics">{e.title}</span>. {e.year}. {e.author}.</p>
+                        )}
                     </div>
                 </div>
             )}
