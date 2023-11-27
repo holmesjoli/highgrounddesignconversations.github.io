@@ -150,3 +150,14 @@ a.active {
 img {
   max-width: 100%;
 }
+
+@media screen and (max-width: 480px) {
+  
+  h4 {
+    font-size: .9rem;
+  }
+
+  h5 {
+    font-size: .8rem;
+  }
+}
