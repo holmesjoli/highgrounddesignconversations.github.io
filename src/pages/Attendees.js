@@ -24,7 +24,10 @@ function attendeeInfo(d, i) {
     return(
         <div className="Text" key={i}>
             <h4>{d["First Name"]} {d["Last Name"]}</h4>
-            <p>{d.Email}</p>
+            <div>
+                <p className="Small"><b>{d.Email}</b></p>
+                <p className="Small">{d.Bio}</p>
+            </div>
         </div>
     )
 }
