@@ -3,17 +3,16 @@ body {
   background-color: $appBackground;
 }
 
-// React app mounting point
-#root {
-  // width: 100vw;
-  // height: 100vh;
-}
-
 // Wrapper
 .Content {
   margin: auto 18rem;
   padding: $appPadding*6 0;
   min-height: 60vh;
+}
+
+.Inner-Content {
+  padding-left: 1.75rem;
+  margin-left: 5rem;
 }
 
 .Text h4,

@@ -47,7 +47,7 @@ export default function Home() {
             {isVerified ? <Attendees/>: 
             <ExternalMain pageName="Home">
                 <Password setIsVerified={setIsVerified}/>
-             </ExternalMain>
+            </ExternalMain>
             }
         </>
     );
