@@ -6,7 +6,7 @@ import { ExternalMain, InternalMain } from "../components/Main";
 
 import { eventManager } from "../utils/global";
 
-function Password({isVerified, setIsVerified}) {
+function Password({setIsVerified}) {
 
     const checkPw = () => {
         // gets the current input value
@@ -21,7 +21,7 @@ function Password({isVerified, setIsVerified}) {
 
     return(
         <div className="Password">
-            <p>Invitees of HGDC 2024 are invited to sign into the conference website using the password emailed to you.</p>
+            <h3>Invitees of HGDC 2024 may sign into the conference website using the password emailed to you.</h3>
             <TextField
                     id="outlined-password-input"
                     label="Password"
@@ -42,11 +42,9 @@ export default function Home() {
         <>
             {isVerified ? <InternalMain pageName="Participants"/>: 
             <ExternalMain pageName="Home">
-                <Password isVerified={isVerified} setIsVerified={setIsVerified}/>
+                <Password setIsVerified={setIsVerified}/>
              </ExternalMain>
             }
         </>
     );
 };
-
-
