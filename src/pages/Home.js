@@ -6,6 +6,8 @@ import { ExternalMain, InternalMain } from "../components/Main";
 
 import { eventManager } from "../utils/global";
 
+import Attendees from "./Attendees";
+
 const year = new Date().getFullYear();
 
 function Password({setIsVerified}) {
@@ -42,7 +44,7 @@ export default function Home() {
     
     return (
         <>
-            {isVerified ? <InternalMain pageName="Attendees"/>: 
+            {isVerified ? <Attendees/>: 
             <ExternalMain pageName="Home">
                 <Password setIsVerified={setIsVerified}/>
              </ExternalMain>

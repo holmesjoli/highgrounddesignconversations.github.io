@@ -37,6 +37,15 @@ export default function Attendees() {
     console.log(data);
 
     return(
-        <InternalMain pageName="Attendees"/>
+        <InternalMain pageName="Attendees">
+        <>
+        <h3>Participants</h3>
+                <h3>Associates</h3>
+                <h3>Scholars</h3>
+
+
+        </>
+
+        </InternalMain>
     )
 }
