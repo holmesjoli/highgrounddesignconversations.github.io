@@ -21,7 +21,6 @@ export function ExternalMain({pageName, children}) {
             <Content>
                 {children}
             </Content>
-            <Footer/>
         </div>
     )
 }
