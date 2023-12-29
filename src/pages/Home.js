@@ -7,6 +7,7 @@ import { ExternalMain, InternalMain } from "../components/Main";
 import { eventManager } from "../utils/global";
 
 const year = new Date().getFullYear();
+console.log(`HGDC${year}`);
 
 function Password({setIsVerified}) {
 

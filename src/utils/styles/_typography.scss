@@ -111,6 +111,7 @@ h2 {
   font-weight: 700;
   padding-left: 1.75rem;
   margin-left: 5rem;
+  // margin-top: 2rem;
 }
 
 h3 {
@@ -137,9 +138,10 @@ b, strong {
   font-weight: bold;
 }
 
-a {
+h6, a {
   color: $appColorSecondary;
   text-decoration: none;
+  font-size: 1rem;
 }
 
 a:focus, a:hover {

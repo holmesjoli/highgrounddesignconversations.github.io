@@ -12,8 +12,8 @@ body {
 // Wrapper
 .Content {
   margin: auto 18rem;
-  padding: $appPadding 0;
-  min-height: 65vh;
+  padding: $appPadding*6 0;
+  min-height: 60vh;
 }
 
 .Contact .Text,
