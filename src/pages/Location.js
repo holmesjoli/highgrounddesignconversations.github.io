@@ -8,7 +8,6 @@ export default function Location() {
                 <h4>Conference</h4>
                 <h4>Thursday evening</h4>
                 <p>TBD</p>
-
             </div>
         </InternalMain>
     )
