@@ -6,13 +6,15 @@ import { ExternalMain, InternalMain } from "../components/Main";
 
 import { eventManager } from "../utils/global";
 
+const year = new Date().getFullYear();
+
 function Password({setIsVerified}) {
 
     const checkPw = () => {
         // gets the current input value
         const answer = document.getElementById("outlined-password-input").value;
     
-        if (answer === "HGDC2024") { 
+        if (answer === `HGDC${year}`) { 
         setIsVerified(true);
         } else {
         alert("Sorry, that's not it");
@@ -21,7 +23,7 @@ function Password({setIsVerified}) {
 
     return(
         <div className="Password">
-            <h3>Invitees of HGDC 2024 may sign into the conference website using the password emailed to you.</h3>
+            <h3>Invitees of HGDC {year} may sign into the conference website using the password emailed to you.</h3>
             <TextField
                     id="outlined-password-input"
                     label="Password"
