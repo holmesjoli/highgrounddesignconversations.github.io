@@ -28,7 +28,7 @@ const schedule = {thursday: [
 
 export default function Schedule() {
     return(
-        <div>
+        <>
             <InternalMain pageName="Schedule">
             {Object.keys(schedule).map((d, i) => 
                 <div className="Day" key={i}>
@@ -41,6 +41,6 @@ export default function Schedule() {
                 </div>
             )}
             </InternalMain>
-        </div>
+        </>
     )
 }

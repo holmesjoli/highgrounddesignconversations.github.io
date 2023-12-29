@@ -7,6 +7,7 @@ export function InternalMain({pageName, children}) {
         <div className={pageName}>
             <InternalNavigation />
             <Content>
+                <h2 className="PageTitle">{pageName}</h2>
                 {children}
             </Content>
             <Footer/>
