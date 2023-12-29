@@ -1,4 +1,4 @@
-import Main from "../components/Main";
+import { InternalMain } from "../components/Main";
 
 import { eventManager, gateCode } from "../utils/global";
 
@@ -18,13 +18,13 @@ const logistics = [
 
 export default function Logistics() {
     return(
-        <Main pageName="Logistics">
+        <InternalMain pageName="Logistics">
             {logistics.map((d, i) => 
                 <div className="Text" key={i}>
                     <h4>{d.header}</h4>
                     <p>{d.p}</p>
                 </div>)}
-        </Main>
+        </InternalMain>
     )
 }
 

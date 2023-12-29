@@ -1,11 +1,23 @@
-import Navigation from "./Navigation";
+import { InternalNavigation, ExternalNavigation } from "./Navigation";
 import Footer from "./Footer";
 import Content from "./Content";
 
-export default function Main({pageName, children}) {
+export function InternalMain({pageName, children}) {
     return(
         <div className={pageName}>
-            <Navigation />
+            <InternalNavigation />
+            <Content>
+                {children}
+            </Content>
+            <Footer/>
+        </div>
+    )
+}
+
+export function ExternalMain({pageName, children}) {
+    return(
+        <div className={pageName}>
+            <ExternalNavigation />
             <Content>
                 {children}
             </Content>

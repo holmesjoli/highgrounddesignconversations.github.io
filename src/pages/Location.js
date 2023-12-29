@@ -1,7 +1,7 @@
-import Main from "../components/Main";
+import { InternalMain } from "../components/Main";
 
 export default function Location() {
     return(
-        <Main pageName="Location"/>
+        <InternalMain pageName="Location"/>
     )
 }

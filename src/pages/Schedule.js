@@ -1,4 +1,4 @@
-import Main from "../components/Main";
+import { InternalMain } from "../components/Main";
 
 const schedule = {thursday: [
                     {header: "Thursday 7.11", p: "lodging check-in", time: "afternoon – early eve"},
@@ -29,7 +29,7 @@ const schedule = {thursday: [
 export default function Schedule() {
     return(
         <div>
-            <Main pageName="Schedule">
+            <InternalMain pageName="Schedule">
             {Object.keys(schedule).map((d, i) => 
                 <div className="Day" key={i}>
                     {schedule[d].map((e, j) => 
@@ -40,7 +40,7 @@ export default function Schedule() {
                         </div>)}
                 </div>
             )}
-            </Main>
+            </InternalMain>
         </div>
     )
 }

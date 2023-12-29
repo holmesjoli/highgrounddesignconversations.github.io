@@ -1,4 +1,4 @@
-import Main from "../components/Main";
+import { InternalMain } from "../components/Main";
 
 const resources = {2023: [
     {author: "David Graeber and David Wengrow", title: "The Dawn of Everything", year: 2021},
@@ -8,7 +8,7 @@ const resources = {2023: [
 
 export default function Resources() {
     return(
-        <Main pageName="Resources"> 
+        <InternalMain pageName="Resources"> 
             {Object.keys(resources).map((d, i) => 
                 <div className="Suggested-Resources" key={i}>
                     <h4 className="Year">{d}</h4>
@@ -20,6 +20,6 @@ export default function Resources() {
                 </div>
             )}
         
-        </Main>
+        </InternalMain>
     )
 }
