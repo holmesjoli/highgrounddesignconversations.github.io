@@ -6,7 +6,18 @@ import { ExternalMain, InternalMain } from "../components/Main";
 
 import { eventManager } from "../utils/global";
 
-function Password() {
+function Password({isVerified, setIsVerified}) {
+
+    const checkPw = () => {
+        // gets the current input value
+        const answer = document.getElementById("outlined-password-input").value;
+    
+        if (answer === "HGDC2024") { 
+        setIsVerified(true);
+        } else {
+        alert("Sorry, that's not it");
+        }
+    };
 
     return(
         <div className="Password">
@@ -17,7 +28,7 @@ function Password() {
                     type="password"
                     autoComplete="current-password"
                     />
-            <Button variant="outlined">submit</Button>
+            <Button variant="outlined" onClick={checkPw}>submit</Button>
             <a href={"mailto:"+eventManager.email}>Questions?</a>
         </div>
     )
@@ -27,25 +38,13 @@ export default function Home() {
 
     const [isVerified, setIsVerified] = useState(false);
     
-    const checkPw = () => {
-        // gets the current input value
-        const answer = document.getElementById("outlined-password-input").value;
-    
-        if (answer === "yourSecretPassword") { 
-        setIsVerified(true);
-        } else {
-        alert("Sorry, that's not it");
-        }
-    };
-    
     return (
         <>
             {isVerified ? <InternalMain pageName="Participants"/>: 
-            <>
             <ExternalMain pageName="Home">
-                <Password />
+                <Password isVerified={isVerified} setIsVerified={setIsVerified}/>
              </ExternalMain>
-            </> }
+            }
         </>
     );
 };
