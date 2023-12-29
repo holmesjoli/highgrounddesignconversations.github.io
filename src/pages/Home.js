@@ -7,7 +7,6 @@ import { ExternalMain, InternalMain } from "../components/Main";
 import { eventManager } from "../utils/global";
 
 const year = new Date().getFullYear();
-console.log(`HGDC${year}`);
 
 function Password({setIsVerified}) {
 
@@ -43,7 +42,7 @@ export default function Home() {
     
     return (
         <>
-            {isVerified ? <InternalMain pageName="Participants"/>: 
+            {isVerified ? <InternalMain pageName="Attendees"/>: 
             <ExternalMain pageName="Home">
                 <Password setIsVerified={setIsVerified}/>
              </ExternalMain>

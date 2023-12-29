@@ -8,7 +8,7 @@ export function InternalNavigation() {
     return (
         <div className="Navigation">
             <div className="Navigation_branding">
-                <NavLink to="/Participants"><img src="/assets/HGDC_Logo_zoomed.png"/></NavLink>
+                <NavLink to="/Attendees"><img src="/assets/HGDC_Logo_zoomed.png"/></NavLink>
             </div>            
             <div className="Navigation_links">
                 <ul id="Navigation_list">
