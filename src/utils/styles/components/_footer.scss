@@ -11,17 +11,29 @@
     height: 20vh;
 }
   
-  .Footer .Contact {
-    grid-area: 1 / 2 / 1 / 3;
-  }
-  
-  .Footer .Event {
-    grid-area: 1 / 4 / 1 / 5;
-  }
-  
-  .Footer .Contact .Text {
-    margin-bottom: .3rem;
-  }
+.Footer .Contact {
+  grid-area: 1 / 2 / 1 / 3;
+}
+
+.Footer .Event {
+  grid-area: 1 / 4 / 1 / 5;
+}
+
+.Footer .Contact .Text {
+  margin-bottom: .3rem;
+}
+
+.Contact .Text,
+.Event .Text {
+  display: grid;
+  margin: .8rem 0;
+  grid-gap: 1.5rem;
+  grid-template-columns: minmax(100px, 20%) 1fr;
+}
+
+.Event .Text {
+  grid-template-columns: minmax(100px, 30%) 1fr;
+}
 
 @media screen and (max-width: 480px) {
   .Footer {

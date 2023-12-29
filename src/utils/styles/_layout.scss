@@ -16,17 +16,6 @@ body {
   min-height: 60vh;
 }
 
-.Contact .Text,
-.Event .Text {
-  display: grid;
-  margin: .8rem 0;
-  grid-gap: 1.5rem;
-}
-
-.Event .Text {
-  grid-template-columns: minmax(100px, 20%) 1fr;
-}
-
 .Text h4,
 .Text h3,
 .Text h5 {
