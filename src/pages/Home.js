@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
-import { ExternalMain } from "../components/Main";
+import { ExternalMain, InternalMain } from "../components/Main";
 
 export default function Home() {
 
@@ -19,15 +21,18 @@ export default function Home() {
     
     return (
         <>
-        {isVerified ? <ExternalMain pageName="Home"/>
-        :
-            (
-            <form onSubmit={checkPw}>
-            <input id="password" name="password" />
-            <button>open sesame</button>
-            </form>
-            )
-        }
+            {isVerified ? <InternalMain pageName="Participants"/>: 
+            <>
+            <ExternalMain pageName="Home">
+                <TextField
+                id="outlined-password-input"
+                label="Password"
+                type="password"
+                autoComplete="current-password"
+                />
+                <Button variant="outlined">submit</Button>
+             </ExternalMain>
+            </> }
         </>
     );
 };
