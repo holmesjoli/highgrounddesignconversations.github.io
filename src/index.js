@@ -17,6 +17,7 @@ import Logistics from './pages/Logistics';
 import Location from './pages/Location';
 import Participants from './pages/Participants';
 import PastParticipants from './pages/PastParticipants';
+import Policies from './pages/Policies';
 import Resources from './pages/Resources';
 import Schedule from './pages/Schedule';
 
@@ -30,6 +31,7 @@ root.render(
       <Route path="/Logistics" element={<Logistics />} />
       <Route path="/Participants" element={<Participants />} />
       <Route path="/Past-Participants" element={<PastParticipants />} />
+      <Route path="/Policies" element={<Policies />} />
       <Route path="/Resources" element={<Resources />} />
       <Route path="/Schedule" element={<Schedule />} />
     </Routes>

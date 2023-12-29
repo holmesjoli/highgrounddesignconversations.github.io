@@ -22,6 +22,9 @@ export function InternalNavigation() {
                         <h3><NavLink to="/Logistics" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Logistics</NavLink></h3>
                     </li>
                     <li className="Navigation_link">
+                        <h3><NavLink to="/Policies" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Policies</NavLink></h3>
+                    </li>
+                    <li className="Navigation_link">
                         <h3><NavLink to="/Resources" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Resources</NavLink></h3>
                     </li>
                 </ul>
