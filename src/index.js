@@ -8,7 +8,8 @@ import {
 } from "react-router-dom";
 
 // Styles
-import './utils/styles/styles.scss'
+import './utils/styles/styles.scss';
+import { createTheme, ThemeProvider } from "@mui/material";
 
 // Pages
 import History from './pages/History';
@@ -21,19 +22,39 @@ import Policies from './pages/Policies';
 import Resources from './pages/Resources';
 import Schedule from './pages/Schedule';
 
+const theme = createTheme({
+  typography: {
+      fontFamily: "futura-pt, sans-serif",
+      fontSize: 13
+  },
+  palette: {
+    background: {
+      paper: "#ffffff"
+    },
+    primary: {
+      main: "#000000"
+    },
+    secondary: {
+      main: "#4e5155"
+    }
+  }
+});
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <HashRouter>
-    <Routes>
-      <Route path="History" element={<History />} />
-      <Route path="/" element={<Home />} />
-      <Route path="/Location" element={<Location />} />
-      <Route path="/Logistics" element={<Logistics />} />
-      <Route path="/Participants" element={<Participants />} />
-      <Route path="/Past-Participants" element={<PastParticipants />} />
-      <Route path="/Policies" element={<Policies />} />
-      <Route path="/Resources" element={<Resources />} />
-      <Route path="/Schedule" element={<Schedule />} />
-    </Routes>
-  </HashRouter>
+  <ThemeProvider theme={theme}>
+    <HashRouter>
+      <Routes>
+        <Route path="History" element={<History />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/Location" element={<Location />} />
+        <Route path="/Logistics" element={<Logistics />} />
+        <Route path="/Participants" element={<Participants />} />
+        <Route path="/Past-Participants" element={<PastParticipants />} />
+        <Route path="/Policies" element={<Policies />} />
+        <Route path="/Resources" element={<Resources />} />
+        <Route path="/Schedule" element={<Schedule />} />
+      </Routes>
+    </HashRouter>
+  </ThemeProvider>
 );

@@ -4,13 +4,32 @@ import TextField from '@mui/material/TextField';
 
 import { ExternalMain, InternalMain } from "../components/Main";
 
+import { eventManager } from "../utils/global";
+
+function Password() {
+
+    return(
+        <div className="Password">
+            <p>Invitees of HGDC 2024 are invited to sign into the conference website using the password emailed to you.</p>
+            <TextField
+                    id="outlined-password-input"
+                    label="Password"
+                    type="password"
+                    autoComplete="current-password"
+                    />
+            <Button variant="outlined">submit</Button>
+            <a href={"mailto:"+eventManager.email}>Questions?</a>
+        </div>
+    )
+}
+
 export default function Home() {
 
     const [isVerified, setIsVerified] = useState(false);
     
     const checkPw = () => {
         // gets the current input value
-        const answer = document.getElementById("password").value;
+        const answer = document.getElementById("outlined-password-input").value;
     
         if (answer === "yourSecretPassword") { 
         setIsVerified(true);
@@ -24,13 +43,7 @@ export default function Home() {
             {isVerified ? <InternalMain pageName="Participants"/>: 
             <>
             <ExternalMain pageName="Home">
-                <TextField
-                id="outlined-password-input"
-                label="Password"
-                type="password"
-                autoComplete="current-password"
-                />
-                <Button variant="outlined">submit</Button>
+                <Password />
              </ExternalMain>
             </> }
         </>
