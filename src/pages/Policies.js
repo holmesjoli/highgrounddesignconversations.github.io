@@ -17,7 +17,8 @@ export default function Policies() {
                 <div className="Text" key={i}>
                     <h4>{d.header}</h4>
                     {d.type === "paragraph" ? <p>{d.p}</p>: <h6>{d.p}</h6>}
-                </div>)}
+                </div>)
+            }
         </InternalMain>
     )
 }
