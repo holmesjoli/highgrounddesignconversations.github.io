@@ -11,7 +11,7 @@ import {
 import './utils/styles/styles.scss'
 
 // Pages
-import Home from './pages/Home';
+import Participants from './pages/Participants';
 import Schedule from './pages/Schedule';
 import Logistics from './pages/Logistics';
 import Location from './pages/Location';
@@ -21,7 +21,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <HashRouter>
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Participants />} />
       <Route path="/Schedule" element={<Schedule />} />
       <Route path="/Location" element={<Location />} />
       <Route path="/Logistics" element={<Logistics />} />
