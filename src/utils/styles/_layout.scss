@@ -38,7 +38,13 @@ img {
 @media screen and (max-width: 480px) {
     
   .Content {
-    margin: auto 1rem;
-    min-height: 65vh;
+    margin: auto 1.5rem;
+    min-height: 60vh;
+    padding: 2rem 0;
+  }
+
+  .Inner-Content {
+    margin-left: 0;
+    padding-left: 0;
   }
 }

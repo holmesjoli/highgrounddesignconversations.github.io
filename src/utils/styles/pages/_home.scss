@@ -7,7 +7,6 @@
 
 .Password {
     width: 50%;
-    height: 50%;
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -34,4 +33,11 @@
 .Password button:hover {
     background-color: $appBorderColor;
     color: #FFFFFF;
+}
+
+@media screen and (max-width: 480px) {
+
+    .Password {
+        width: 80%;
+    }
 }

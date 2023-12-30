@@ -10,7 +10,6 @@ function parseCSV(csvText) {
     const data = []; // Initialize an array to store parsed data
     for (let i = 2; i < rows.length; i++) {
         const rowData = rows[i].split('\t'); // Split the row, handling '\t' characters
-        console.log(rowData);
         const rowObject = {};
         for (let j = 0; j < headers.length; j++) {
             rowObject[headers[j]] = rowData[j];
