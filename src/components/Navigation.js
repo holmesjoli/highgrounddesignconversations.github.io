@@ -15,9 +15,9 @@ export function InternalNavigation() {
                     <li className="Navigation_link">
                         <h3><NavLink to="/Schedule" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Schedule</NavLink></h3>
                     </li>
-                    <li className="Navigation_link">
+                    {/* <li className="Navigation_link">
                         <h3><NavLink to="/Location" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Location</NavLink></h3>
-                    </li>
+                    </li> */}
                     <li className="Navigation_link">
                         <h3><NavLink to="/Logistics" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Logistics</NavLink></h3>
                     </li>
@@ -41,12 +41,12 @@ export function ExternalNavigation() {
             </div>            
             <div className="Navigation_links">
                 <ul id="Navigation_list">
-                    <li className="Navigation_link">
+                    {/* <li className="Navigation_link">
                         <h3><NavLink to="/History" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>HGDC History</NavLink></h3>
                     </li>
                     <li className="Navigation_link">
                         <h3><NavLink to="/Past-Participants" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>HGDC Past Participants</NavLink></h3>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </div>
