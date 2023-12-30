@@ -1,7 +1,6 @@
 .Footer {
     margin: auto 20rem;
     border-top: 1px solid $appBorderColor;
-    min-height: 10vh;
     padding: $appPadding;
     display: grid;
     grid-template-columns: 1fr 100px 1fr;
@@ -12,7 +11,7 @@
 }
   
 .Footer .Contact {
-  grid-area: 1 / 2 / 1 / 3;
+  grid-area: 1 / 2 / 1 / 4;
 }
 
 .Footer .Event {
@@ -28,11 +27,11 @@
   display: grid;
   margin: .8rem 0;
   grid-gap: 1.5rem;
-  grid-template-columns: minmax(100px, 20%) 1fr;
+  grid-template-columns: minmax(80px, 20%) 1fr;
 }
 
 .Event .Text {
-  grid-template-columns: minmax(100px, 30%) 1fr;
+  grid-template-columns: minmax(80px, 40%) 1fr;
 }
 
 @media screen and (max-width: 480px) {
@@ -40,6 +39,7 @@
     grid-template-columns: 1fr 1fr;
     margin: $appMargin;
     padding: $appPadding/2;
+    height: 15vh;
 
     .Text {
       grid-gap: 1rem;
