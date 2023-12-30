@@ -19,7 +19,7 @@ function Password({setIsVerified}) {
         if (answer === `HGDC${year}`) { 
         setIsVerified(true);
         } else {
-        alert("Sorry, that's not it");
+        alert(`Incorrect password. Please try again or reach out to ${eventManager.email} for assistance.}`);
         }
     };
 
