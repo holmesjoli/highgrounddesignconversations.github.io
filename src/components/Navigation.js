@@ -13,6 +13,9 @@ export function InternalNavigation() {
             <div className="Navigation_links">
                 <ul id="Navigation_list">
                     <li className="Navigation_link">
+                        <h3><NavLink to="/Participants" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Participants</NavLink></h3>
+                    </li>
+                    <li className="Navigation_link">
                         <h3><NavLink to="/Schedule" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Schedule</NavLink></h3>
                     </li>
                     {/* <li className="Navigation_link">
@@ -37,7 +40,7 @@ export function ExternalNavigation() {
     return (
         <div className="Navigation">
             <div className="Navigation_branding">
-                <NavLink to="/"><img src="/assets/HGDC_Logo_zoomed.png"/></NavLink>
+                <NavLink to="/"><img src="/assets/HighGroundLogo.png"/></NavLink>
             </div>            
             <div className="Navigation_links">
                 <ul id="Navigation_list">

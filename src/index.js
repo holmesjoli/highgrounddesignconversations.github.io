@@ -48,6 +48,7 @@ root.render(
         <Route path="/Attendees" element={<Attendees />} />
         <Route path="History" element={<History />} />
         <Route path="/" element={<Home />} />
+        <Route path="/Participants" element={<Attendees />} />
         <Route path="/Location" element={<Location />} />
         <Route path="/Logistics" element={<Logistics />} />
         <Route path="/Past-Participants" element={<PastParticipants />} />
