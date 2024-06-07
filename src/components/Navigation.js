@@ -8,7 +8,7 @@ export function InternalNavigation() {
     return (
         <div className="Navigation">
             <div className="Navigation_branding">
-                <NavLink to="/Attendees"><img src="/assets/HighGroundLogo.png"/></NavLink>
+                <NavLink to="/Attendees"><img src="/assets/HGDC_HighGroundLogo.png"/></NavLink>
             </div>            
             <div className="Navigation_links">
                 <ul id="Navigation_list">
@@ -40,7 +40,7 @@ export function ExternalNavigation() {
     return (
         <div className="Navigation">
             <div className="Navigation_branding">
-                <NavLink to="/"><img src="/assets/HighGroundLogo.png"/></NavLink>
+                <NavLink to="/"><img src="/assets/HGDC_HighGroundLogo.png"/></NavLink>
             </div>            
             <div className="Navigation_links">
                 <ul id="Navigation_list">
