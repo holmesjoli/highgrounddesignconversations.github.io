@@ -2,7 +2,7 @@ import { InternalMain } from "../components/Main";
 
 const schedule = {thursday: [
                     {header: "Thursday 7.11", p: "lodging check-in", time: "afternoon – early eve"},
-                    {header: "", p: "happy hour at Jan Abrams' Studio",  time: "5 – 7pm"}],
+                    {header: "", p: "happy hour at Jan Abrams' studio",  time: "5 – 7pm"}],
                   friday: [
                     {header: "Friday 7.12", p: "light breakfast", time: "8:30am", day: "Friday"},
                     {header: "", p: "presentations with discussions", time: "9am – 12am", day: "Friday"},
