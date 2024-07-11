@@ -48,7 +48,7 @@ export default function Attendees() {
     return(
         <InternalMain pageName="Attendees">
             <div className="Inner-Content">
-                <h3>Participants</h3>
+                <h3>Speakers</h3>
                 {data.filter(d => d.Level === "Participant").map((d, i) => 
                     attendeeInfo(d, i)
                 )}
