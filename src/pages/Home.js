@@ -25,7 +25,7 @@ function Password({setIsVerified}) {
 
     return(
         <div className="Password">
-            <h3>Invitees of HGDC {year} may sign into the conference website using the password emailed to you.</h3>
+            <h3>Thank you for making the 2024 HGDC a success! Invitees of HGDC 2024 may still access the conference website using the password emailed to you.</h3>
             <TextField
                     id="outlined-password-input"
                     label="Password"
@@ -41,7 +41,7 @@ function Password({setIsVerified}) {
 function Banner() {
     return(
         <div className="Banner">
-            <p> Thank you for making the 2024 High Ground Design Conversations event a success! Next year's conference is scheduled in <span className="bold">Santa Fe, July 10th - July 13th.</span> Can't wait to see you there!</p>
+            <p>High Ground Design Conversations 2025 will take place in <span className="bold">Santa Fe</span> from <span className="bold">July 10th - July 13th.</span> Can't wait to see you there!</p>
         </div>
     )
 }
