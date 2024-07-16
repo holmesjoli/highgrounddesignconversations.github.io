@@ -7,9 +7,9 @@ export const eventAddress = '171 County Road 74 Santa Fe, NM 85706';
 export const masterDataURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQLFdoeX9Ji5UFLRpbCifTuKuX3wSMn7eo9rAjGSmP6mtAJ235-cNIUSti7W8NuMpb85veexDB6NzGU/pub?output=tsv';
 export const resourcesDataURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQLFdoeX9Ji5UFLRpbCifTuKuX3wSMn7eo9rAjGSmP6mtAJ235-cNIUSti7W8NuMpb85veexDB6NzGU/pub?gid=1855132867&single=true&output=tsv';
 
-export function parseCSV(csvText) {
+export function parseCSV(csvText, skip = 0) {
     const rows = csvText.split(/\r?\n/); // Split CSV text into rows, handling '\r' characters
-    const headers = rows[1].split('\t'); // Extract headers (assumes the first row is the header row)
+    const headers = rows[skip].split('\t'); // Extract headers (assumes the first row is the header row)
     const data = []; // Initialize an array to store parsed data
     for (let i = 2; i < rows.length; i++) {
         const rowData = rows[i].split('\t'); // Split the row, handling '\t' characters

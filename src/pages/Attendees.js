@@ -13,7 +13,7 @@ export default function Attendees() {
         fetch(masterDataURL, {method: 'GET'})
           .then(response => response.text())
           .then(data => {
-            setData(parseCSV(data).filter(d => d["2024"] === "Yes"));
+            setData(parseCSV(data, 1).filter(d => d["2024"] === "Yes"));
         })
         .finally(setLoaded(false));
 

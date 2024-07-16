@@ -12,7 +12,7 @@ export default function PastParticipants() {
         fetch(masterDataURL, {method: 'GET'})
           .then(response => response.text())
           .then(data => {
-            setData(wideToLong(parseCSV(data)));
+            setData(wideToLong(parseCSV(data, 1)));
         })
         .finally(setLoaded(false));
 
