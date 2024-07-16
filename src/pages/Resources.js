@@ -1,4 +1,6 @@
+import { useState, useEffect } from "react";
 import { InternalMain } from "../components/Main";
+import { resourcesDataURL, parseCSV} from "../utils/global";
 
 const resources = {2023: [
     {author: "David Graeber and David Wengrow", title: "The Dawn of Everything", year: 2021},
@@ -7,6 +9,23 @@ const resources = {2023: [
 };
 
 export default function Resources() {
+
+    const [data, setData] = useState([]);
+    const [loading, setLoaded] = useState(true);
+
+    useEffect(() => {
+
+        fetch(resourcesDataURL, {method: 'GET'})
+          .then(response => response.text())
+          .then(data => {
+            setData(parseCSV(data));
+        })
+        .finally(setLoaded(false));
+
+    }, []);
+
+    console.log(data);
+
     return(
         <InternalMain pageName="Resources"> 
             {Object.keys(resources).map((d, i) => 

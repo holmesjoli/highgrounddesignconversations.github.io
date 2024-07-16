@@ -5,6 +5,7 @@ export const eventManager = {managerName: "Joli Holmes", phone: "206.915.0891", 
 export const gateCode = "1966";
 export const eventAddress = '171 County Road 74 Santa Fe, NM 85706';
 export const masterDataURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQLFdoeX9Ji5UFLRpbCifTuKuX3wSMn7eo9rAjGSmP6mtAJ235-cNIUSti7W8NuMpb85veexDB6NzGU/pub?output=tsv';
+export const resourcesDataURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQLFdoeX9Ji5UFLRpbCifTuKuX3wSMn7eo9rAjGSmP6mtAJ235-cNIUSti7W8NuMpb85veexDB6NzGU/pub?gid=1855132867&single=true&output=tsv';
 
 export function parseCSV(csvText) {
     const rows = csvText.split(/\r?\n/); // Split CSV text into rows, handling '\r' characters
