@@ -1,6 +1,6 @@
 .Resources .Content .Suggested-Resources {
     display: grid;
-    grid-template-columns: minmax(100px, 20%) 1fr;
+    grid-template-columns: minmax(25px, 16%) 1fr;
     margin: .8rem 0;
     grid-gap: 1.5rem;
 }
@@ -13,7 +13,7 @@
     margin-bottom: .55rem;
 }
 
-.Resources a {
+.Resources .Content a {
     color: $appColor;
 }
   

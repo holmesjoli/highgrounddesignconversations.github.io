@@ -26,14 +26,14 @@ export default function Resources() {
                 {years.map((year, i) => {
                     return(
                         <div className="Suggested-Resources" key={i}>
-                            <h4 className="Year">{year}</h4>
+                            <h3 className="Year">{year}</h3>
                             <div className="Resource">
                                 {data.filter(d => +d.HGDCYear === year).map((d, j) =>
                                     <div className="Text" key={j} >
                                         <a href={d.Link}>
-                                            <p className="Small"><b>{d.ResourceName}</b></p>
+                                            <p><b>{d.ResourceName}</b></p>
                                         </a>
-                                        <p className="Small">{d.Author}</p>
+                                        <p>{d.Author}</p>
                                     </div>
                                 )}
                             </div>

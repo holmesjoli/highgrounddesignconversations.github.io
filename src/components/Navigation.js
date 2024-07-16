@@ -50,6 +50,9 @@ export function ExternalNavigation() {
                     <li className="Navigation_link">
                         <h3><NavLink to="/Past-Participants" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Past Participants</NavLink></h3>
                     </li>
+                    <li className="Navigation_link">
+                        <h3><NavLink to="/Resources" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Resources</NavLink></h3>
+                    </li>
                 </ul>
             </div>
         </div>
