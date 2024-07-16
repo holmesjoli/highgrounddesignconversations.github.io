@@ -42,7 +42,7 @@ export function wideToLong(array) {
 export function attendeeInfo(d, i) {
     return(
         <div className="Text" key={i}>
-            <h4>{d["FirstName"]} {d["LastName"]}</h4>
+            <h4>{d.FirstName} {d.LastName}</h4>
             <div>
                 <p className="Small"><b>{d.Email}</b></p>
                 <p className="Small">{d.Bio}</p>
