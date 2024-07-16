@@ -19,8 +19,9 @@ import Logistics from './pages/Logistics';
 import Location from './pages/Location';
 import PastParticipants from './pages/PastParticipants';
 import Policies from './pages/Policies';
-import Resources from './pages/Resources';
+import ExternalResources from './pages/ExternalResources';
 import Schedule from './pages/Schedule';
+import InternalResources from './pages/InternalResources';
 
 const theme = createTheme({
   typography: {
@@ -53,7 +54,8 @@ root.render(
         <Route path="/Logistics" element={<Logistics />} />
         <Route path="/Past-Participants" element={<PastParticipants />} />
         <Route path="/Policies" element={<Policies />} />
-        <Route path="/Resources" element={<Resources />} />
+        <Route path="/Resources" element={<ExternalResources />} />
+        <Route path="/Resources" element={<InternalResources />} />
         <Route path="/Schedule" element={<Schedule />} />
       </Routes>
     </HashRouter>
