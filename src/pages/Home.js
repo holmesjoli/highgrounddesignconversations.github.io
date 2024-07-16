@@ -25,7 +25,8 @@ function Password({setIsVerified}) {
 
     return(
         <div className="Password">
-            <h3>Invitees of HGDC {year} may sign into the conference website using the password emailed to you.</h3>
+            <h3> Thank you for making the 27th High Ground Design Conversations event a success! Next year's conference is scheduled in Santa Fe for July 10th - July 13th.</h3>
+            {/* <h3>Invitees of HGDC {year} may sign into the conference website using the password emailed to you.</h3> */}
             <TextField
                     id="outlined-password-input"
                     label="Password"
