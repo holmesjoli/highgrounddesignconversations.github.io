@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/highgrounddesignconversations/static/css/main.c9c1f078.css",
-    "main.js": "/highgrounddesignconversations/static/js/main.be6a8ce1.js",
+    "main.js": "/highgrounddesignconversations/static/js/main.71338cb2.js",
     "index.html": "/highgrounddesignconversations/index.html",
     "main.c9c1f078.css.map": "/highgrounddesignconversations/static/css/main.c9c1f078.css.map",
-    "main.be6a8ce1.js.map": "/highgrounddesignconversations/static/js/main.be6a8ce1.js.map"
+    "main.71338cb2.js.map": "/highgrounddesignconversations/static/js/main.71338cb2.js.map"
   },
   "entrypoints": [
     "static/css/main.c9c1f078.css",
-    "static/js/main.be6a8ce1.js"
+    "static/js/main.71338cb2.js"
   ]
 }
