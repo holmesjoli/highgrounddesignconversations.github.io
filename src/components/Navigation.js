@@ -47,9 +47,9 @@ export function ExternalNavigation() {
                     {/* <li className="Navigation_link">
                         <h3><NavLink to="/History" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>HGDC History</NavLink></h3>
                     </li> */}
-                    {/* <li className="Navigation_link">
+                    <li className="Navigation_link">
                         <h3><NavLink to="/Past-Participants" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Past Participants</NavLink></h3>
-                    </li> */}
+                    </li>
                 </ul>
             </div>
         </div>

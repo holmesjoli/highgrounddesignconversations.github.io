@@ -18,24 +18,23 @@ export default function PastParticipants() {
     }, []);
 
     return(
-        <ExternalMain pageName="Past-Participants">
+        <ExternalMain pageName="Past-Participants Attendees">
             {years.map((year, i) => {
-                console.log(year);
                 return (<div className="Inner-Content">
-                    <h3>{year}</h3>
-                    <h4>Speakers</h4>
+                    <h2>{year}</h2>
+                    <h3>Speakers</h3>
                     {data.filter(d => d.Level === "Participant").filter(d => d.Year === year).map((d, i) => 
                         attendeeInfo(d, i)
                     )}
-                    <h4>Associates</h4>
+                    <h3>Associates</h3>
                     {data.filter(d => d.Level === "Associate").filter(d => d.Year === year).map((d, i) => 
                         attendeeInfo(d, i)
                     )}
-                    <h4>Event Manager</h4>
+                    <h3>Event Manager</h3>
                     {data.filter(d => d.Level === "Event Manager").filter(d => d.Year === year).map((d, i) => 
                         attendeeInfo(d, i)
                     )}
-                    <h4>Scholars</h4>
+                    <h3>Scholars</h3>
                     {data.filter(d => d.Level === "Scholar").filter(d => d.Year === year).map((d, i) => 
                         attendeeInfo(d, i)
                     )}
