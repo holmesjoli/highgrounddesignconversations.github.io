@@ -25,8 +25,8 @@ export function wideToLong(array) {
             .map(year => 
                 c[year] === "Yes" ? (
                     {             // map each year to separate object         
-                        FirstName: c["First Name"],
-                        LastName: c["Last Name"],
+                        FirstName: c.FirstName,
+                        LastName: c.LastName,
                         Email: c.Email,
                         Level: c.Level,
                         Bio: c.Bio,
@@ -42,7 +42,7 @@ export function wideToLong(array) {
 export function attendeeInfo(d, i) {
     return(
         <div className="Text" key={i}>
-            <h4>{d["First Name"]} {d["Last Name"]}</h4>
+            <h4>{d["FirstName"]} {d["LastName"]}</h4>
             <div>
                 <p className="Small"><b>{d.Email}</b></p>
                 <p className="Small">{d.Bio}</p>
