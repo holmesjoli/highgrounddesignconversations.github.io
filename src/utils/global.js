@@ -1,3 +1,6 @@
+import Skeleton from '@mui/material/Skeleton';
+import Stack from '@mui/material/Stack';
+
 export const eventManager = {managerName: "Joli Holmes", phone: "206.915.0891", email: "holmesjoli@gmail.com"}
 export const gateCode = "1966";
 export const eventAddress = '171 County Road 74 Santa Fe, NM 85706';
@@ -39,8 +42,13 @@ export function wideToLong(array) {
     return long;
 }
 
-export function attendeeInfo(d, i) {
+export function attendeeInfo(d, i, loading) {
     return(
+        loading? 
+        <Stack spacing={1}>
+            <Skeleton variant="rectangular" width={'100%'} height={60} />
+        </Stack>
+        : 
         <div className="Text" key={i}>
             <h4>{d.FirstName} {d.LastName}</h4>
             <div>
@@ -48,5 +56,6 @@ export function attendeeInfo(d, i) {
                 <p className="Small">{d.Bio}</p>
             </div>
         </div>
+        
     )
 }
