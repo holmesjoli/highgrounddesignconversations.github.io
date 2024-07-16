@@ -23,21 +23,36 @@ export default function PastParticipants() {
                 return (<div className="Inner-Content">
                     <h2>{year}</h2>
                     <h3>Speakers</h3>
-                    {data.filter(d => d.Level === "Participant").filter(d => d.Year === year).map((d, i) => 
+
+                    {year === 2022 ? 
+                    data.filter(d => d.Level === "Participant" && !(d.LastName === "Fanning" || d.LastName === "Roederer")).filter(d => d.Year === year).map((d, i) => 
                         attendeeInfo(d, i)
-                    )}
+                    ): data.filter(d => d.Level === "Participant").filter(d => d.Year === year).map((d, i) => 
+                    attendeeInfo(d, i))
+                    }
                     <h3>Associates</h3>
-                    {data.filter(d => d.Level === "Associate").filter(d => d.Year === year).map((d, i) => 
-                        attendeeInfo(d, i)
-                    )}
+                    {year === 2023 ? 
+                        data.filter(d => d.Level === "Associate").filter(d => d.Year === year).filter(d => d.FirstName !== "Jeremy").map((d, i) => 
+                        attendeeInfo(d, i))
+                    :  year === 2022 ? 
+                        data.filter(d => d.Level === "Associate" || d.LastName === "Fanning" || d.LastName === "Roederer").filter(d => d.Year === year).map((d, i) => 
+                        attendeeInfo(d, i)) :
+                        data.filter(d => d.Level === "Associate").filter(d => d.Year === year).map((d, i) => 
+                        attendeeInfo(d, i))
+                    }
                     <h3>Event Manager</h3>
-                    {data.filter(d => d.Level === "Event Manager").filter(d => d.Year === year).map((d, i) => 
-                        attendeeInfo(d, i)
-                    )}
+                    {year === 2024 ? 
+                        data.filter(d => d.LastName === "Holmes").filter(d => d.Year === year).map((d, i) => 
+                        attendeeInfo(d, i))
+                    : data.filter(d => d.LastName === "Billauer").filter(d => d.Year === year).map((d, i) => 
+                        attendeeInfo(d, i))}
                     <h3>Scholars</h3>
-                    {data.filter(d => d.Level === "Scholar").filter(d => d.Year === year).map((d, i) => 
-                        attendeeInfo(d, i)
-                    )}
+                    {year === 2024 ? 
+                        data.filter(d => d.Level === "Scholar").filter(d => d.Year === year).map((d, i) => 
+                        attendeeInfo(d, i))
+                    : data.filter(d => d.Level === "Scholar" || d.LastName === "Holmes").filter(d => d.Year === year).map((d, i) => 
+                        attendeeInfo(d, i))
+                    }
                 </div>)
             })
         };
