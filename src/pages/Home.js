@@ -25,8 +25,7 @@ function Password({setIsVerified}) {
 
     return(
         <div className="Password">
-            <h3> Thank you for making the 27th High Ground Design Conversations event a success! Next year's conference is scheduled in Santa Fe for July 10th - July 13th.</h3>
-            {/* <h3>Invitees of HGDC {year} may sign into the conference website using the password emailed to you.</h3> */}
+            <h3>Invitees of HGDC {year} may sign into the conference website using the password emailed to you.</h3>
             <TextField
                     id="outlined-password-input"
                     label="Password"
@@ -39,6 +38,14 @@ function Password({setIsVerified}) {
     )
 }
 
+function Banner() {
+    return(
+        <div className="Banner">
+            <p> Thank you for making the 2024 High Ground Design Conversations event a success! Next year's conference is scheduled in <span className="bold">Santa Fe, July 10th - July 13th.</span> Can't wait to see you there!</p>
+        </div>
+    )
+}
+
 export default function Home() {
 
     const [isVerified, setIsVerified] = useState(false);
@@ -46,9 +53,13 @@ export default function Home() {
     return (
         <>
             {isVerified ? <Attendees/>: 
-            <ExternalMain pageName="Home">
-                <Password setIsVerified={setIsVerified}/>
-            </ExternalMain>
+            <>
+                <Banner/>
+                <ExternalMain pageName="Home">
+                
+                    <Password setIsVerified={setIsVerified}/>
+                </ExternalMain>
+            </>
             }
         </>
     );
