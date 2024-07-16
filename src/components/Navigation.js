@@ -40,7 +40,7 @@ export function ExternalNavigation() {
     return (
         <div className="Navigation">
             <div className="Navigation_branding">
-                <NavLink to="/"><img src="/assets/HGDC_HighGroundLogo.png"/></NavLink>
+                <NavLink to="/"><img id="Logo" src="/assets/HGDC_HighGroundLogo.png"/></NavLink>
             </div>            
             <div className="Navigation_links">
                 <ul id="Navigation_list">

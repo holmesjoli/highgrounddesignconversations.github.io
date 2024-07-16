@@ -5,6 +5,7 @@ import { masterDataURL, wideToLong, parseCSV, attendeeInfo } from "../utils/glob
 export default function PastParticipants() {
 
     const [data, setData] = useState([]);
+    const [loading, setLoaded] = useState(true);
     const years = [2024, 2023, 2022];
 
     useEffect(() => {
@@ -23,6 +24,10 @@ export default function PastParticipants() {
             {years.map((year, i) => {
                 return (<div className="Inner-Content">
                     <h2>{year}</h2>
+
+                    {year === 2024 ? <img src="/assets/HGDC2024.jpg"/> : null}
+                    {year === 2023 ? <img src="/assets/HGDC2023.jpg"/> : null}
+
                     <h3>Speakers</h3>
 
                     {year === 2022 ? 
