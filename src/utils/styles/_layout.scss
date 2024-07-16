@@ -8,6 +8,11 @@ body {
   margin: auto 18rem;
   padding: $appPadding*6 0;
   min-height: 60vh;
+
+  > p {
+    padding-left: 1.75rem;
+    margin-left: 5rem;
+  }
 }
 
 .Inner-Content {

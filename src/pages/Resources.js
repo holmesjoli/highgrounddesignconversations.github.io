@@ -20,22 +20,28 @@ export default function Resources() {
     }, []);
 
     return(
-        <InternalMain pageName="Resources"> 
-            {years.map((year, i) => {
-
-                return(
-                    <div className="Suggested-Resources" key={i}>
-                        <h4 className="Year">{year}</h4>
-                        <div className="Resource">
-                            {data.filter(d => +d.HGDCYear === year).map((d, j) => 
-                                <p className="Text" key={j}><span className="italics">{d.ResourceName}</span>. {d.Author}.</p>
-                            )}
+        <InternalMain pageName="Resources">
+            <>
+                <p>Books, films, and articles mentioned and referenced during High Ground Design Conversations are listed below. Special thanks to Rick Griffith and Mickey McManus for their careful tracking of these resources throughout the talks, and to Rick Griffith for compiling these resources into an accessible list on <a href="https://bookshop.org/lists/high-ground-book-citations?" target="_blank" className="underline">Bookshop.org.</a></p>
+                {years.map((year, i) => {
+                    return(
+                        <div className="Suggested-Resources" key={i}>
+                            <h4 className="Year">{year}</h4>
+                            <div className="Resource">
+                                {data.filter(d => +d.HGDCYear === year).map((d, j) =>
+                                    <div className="Text" key={j} >
+                                        <a href={d.Link}>
+                                            <p className="Small"><b>{d.ResourceName}</b></p>
+                                        </a>
+                                        <p className="Small">{d.Author}</p>
+                                    </div>
+                                )}
+                            </div>
                         </div>
-                    </div>
-                )
-            }
-            )}
-        
+                    )
+                }
+                )}
+            </>
         </InternalMain>
     )
 }

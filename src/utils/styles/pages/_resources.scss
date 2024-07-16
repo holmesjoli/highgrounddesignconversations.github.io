@@ -10,7 +10,15 @@
 }
 
 .Resources .Text {
-    margin-bottom: .18rem;
+    margin-bottom: .55rem;
+}
+
+.Resources a {
+    color: $appColor;
+}
+  
+.Resources a:hover {
+    color: blue;
 }
 
 @media screen and (max-width: 480px) {
