@@ -27,6 +27,7 @@ export default function PastParticipants() {
 
                     {year === 2024 ? <img src="/assets/HGDC2024.jpg"/> : null}
                     {year === 2023 ? <img src="/assets/HGDC2023.jpg"/> : null}
+                    {year === 2022 ? <img src="/assets/HGDC2022.jpg"/> : null}
 
                     <h3>Speakers</h3>
 

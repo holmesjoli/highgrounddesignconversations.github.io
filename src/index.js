@@ -54,8 +54,8 @@ root.render(
         <Route path="/Logistics" element={<Logistics />} />
         <Route path="/Past-Participants" element={<PastParticipants />} />
         <Route path="/Policies" element={<Policies />} />
-        <Route path="/Resources" element={<ExternalResources />} />
-        <Route path="/Resources" element={<InternalResources />} />
+        <Route path="/ExternalResources" element={<ExternalResources />} />
+        <Route path="/InternalResources" element={<InternalResources />} />
         <Route path="/Schedule" element={<Schedule />} />
       </Routes>
     </HashRouter>
