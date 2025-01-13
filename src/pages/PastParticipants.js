@@ -20,7 +20,7 @@ export default function PastParticipants() {
     }, []);
 
     return(
-        <ExternalMain pageName="Past-Participants Attendees">
+        <ExternalMain pageName="Past-Participants Participants">
             {years.map((year, i) => {
                 return (<div className="Inner-Content">
                     <h2>{year}</h2>

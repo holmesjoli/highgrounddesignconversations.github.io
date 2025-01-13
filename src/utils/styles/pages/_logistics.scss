@@ -1,6 +1,6 @@
 .Logistics .Content .Text,
 .Policies .Content .Text,
-.Attendees .Content .Inner-Content .Text {
+.Participants .Content .Inner-Content .Text {
   display: grid;
   grid-template-columns: minmax(100px, 20%) 1fr;
   margin: .8rem 0;

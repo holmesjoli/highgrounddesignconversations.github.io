@@ -12,7 +12,7 @@ import './utils/styles/styles.scss';
 import { createTheme, ThemeProvider } from "@mui/material";
 
 // Pages
-import Attendees from './pages/Attendees';
+import Participants from './pages/Participants';
 import History from './pages/History';
 import Home from './pages/Home';
 import Logistics from './pages/Logistics';
@@ -46,10 +46,9 @@ root.render(
   <ThemeProvider theme={theme}>
     <HashRouter>
       <Routes>
-        <Route path="/Attendees" element={<Attendees />} />
+        <Route path="/Participants" element={<Participants />} />
         <Route path="History" element={<History />} />
         <Route path="/" element={<Home />} />
-        <Route path="/Participants" element={<Attendees />} />
         <Route path="/Location" element={<Location />} />
         <Route path="/Logistics" element={<Logistics />} />
         <Route path="/Past-Participants" element={<PastParticipants />} />

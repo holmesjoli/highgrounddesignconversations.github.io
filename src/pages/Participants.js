@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { InternalMain } from "../components/Main";
 import { masterDataURL, parseCSV, attendeeInfo, currentYearString } from "../utils/global";
 
-export default function Attendees() {
+export default function Participants() {
 
     const [data, setData] = useState([]);
     const [loading, setLoaded] = useState(true);
@@ -20,7 +20,7 @@ export default function Attendees() {
       }, []);
 
     return(
-        <InternalMain pageName="Attendees">
+        <InternalMain pageName="Participants">
             <div className="Inner-Content">
                 <h3>Speakers</h3>
                 {data.filter(d => d.Level === "Speaker").map((d, i) => 

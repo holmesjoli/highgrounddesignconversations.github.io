@@ -6,7 +6,7 @@ import { ExternalMain } from "../components/Main";
 
 import { eventManager, currentYear } from "../utils/global";
 
-import Attendees from "./Attendees";
+import Participants from "./Participants";
 
 function Password({setIsVerified}) {
 
@@ -50,7 +50,7 @@ export default function Home() {
     
     return (
         <>
-            {isVerified ? <Attendees/>: 
+            {isVerified ? <Participants/>: 
             <>
                 <Banner/>
                 <ExternalMain pageName="Home">

@@ -8,12 +8,12 @@ export function InternalNavigation() {
     return (
         <div className="Navigation">
             <div className="Navigation_branding">
-                <NavLink to="/Attendees"><img id="Logo" src="/assets/HGDC_HighGroundLogo.png"/></NavLink>
+                <NavLink to="/Participants"><img id="Logo" src="/assets/HGDC_HighGroundLogo.png"/></NavLink>
             </div>            
             <div className="Navigation_links">
                 <ul id="Navigation_list">
                     <li className="Navigation_link">
-                        <h3><NavLink to="/Participants" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Attendees</NavLink></h3>
+                        <h3><NavLink to="/Participants" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Participants</NavLink></h3>
                     </li>
                     <li className="Navigation_link">
                         <h3><NavLink to="/Schedule" className={({ isActive }) => (isActive ? 'active' : 'inactive')}>Schedule</NavLink></h3>
