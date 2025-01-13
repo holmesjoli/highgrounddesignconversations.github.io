@@ -23,7 +23,11 @@ export default function Attendees() {
         <InternalMain pageName="Attendees">
             <div className="Inner-Content">
                 <h3>Speakers</h3>
-                {data.filter(d => d.Level === "Participant").map((d, i) => 
+                {data.filter(d => d.Level === "Speaker").map((d, i) => 
+                    attendeeInfo(d, i, loading)
+                )}
+                <h3>Speakers Emeritus</h3>
+                {data.filter(d => d.Level === "Speaker Emeritus").map((d, i) => 
                     attendeeInfo(d, i, loading)
                 )}
                 <h3>Associates</h3>

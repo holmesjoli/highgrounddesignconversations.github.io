@@ -54,7 +54,7 @@ export function attendeeInfo(d, i, loading) {
             <h4>{d.FirstName} {d.LastName}</h4>
             <div>
                 <p className="Small"><b>{d.Email}</b></p>
-                <p className="Small">{d.Bio}</p>
+                <p className="Small">{d.Bio} {d.City}, {d.State}</p>
             </div>
         </div>
         
