@@ -60,3 +60,7 @@ export function attendeeInfo(d, i, loading) {
         
     )
 }
+
+export const currentYear = new Date().getFullYear();
+
+export const currentYearString = currentYear.toString();

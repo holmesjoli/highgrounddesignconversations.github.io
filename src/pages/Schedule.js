@@ -1,10 +1,10 @@
 import { InternalMain } from "../components/Main";
 
 const schedule = {thursday: [
-                    {header: "Thursday 7.11", p: "lodging check-in", time: "afternoon – early eve"},
-                    {header: "", p: "happy hour at Jan Abrams' studio",  time: "5 – 7pm"}],
+                    {header: "Thursday 7.10", p: "lodging check-in", time: "afternoon – early eve"},
+                    {header: "", p: "happy hour at main HGDC House",  time: "5 – 7pm"}],
                   friday: [
-                    {header: "Friday 7.12", p: "light breakfast", time: "8:30am", day: "Friday"},
+                    {header: "Friday 7.11", p: "light breakfast", time: "8:30am", day: "Friday"},
                     {header: "", p: "presentations with discussions", time: "9am – 12am", day: "Friday"},
                     {header: "", p: "lunch", time: "12 – 1pm", day: "Friday"},
                     {header: "", p: "presentations with discussions", time: "1 – 2:30pm", day: "Friday"},
@@ -13,7 +13,7 @@ const schedule = {thursday: [
                     {header: "", p: "dinner at the main HGDC House", time: "7:30 – 8:30pm", day: "Friday"},
                   ],
                   saturday: [
-                    {header: "Saturday 7.13", p: "light breakfast", time: "8:30am"},
+                    {header: "Saturday 7.12", p: "light breakfast", time: "8:30am"},
                     {header: "", p: "presentations with discussions", time: "9am – 12am"},
                     {header: "", p: "lunch", time: "12 – 1pm"},
                     {header: "", p: "presentations with discussions", time: "1 – 2:30pm"},
@@ -22,7 +22,7 @@ const schedule = {thursday: [
                     {header: "", p: "dinner at the main HGDC House", time: "7:30 – 8:30pm"},
                   ],
                   sunday: [
-                    {header: "Sunday 7.14", p: "associate and scholar remarks", time: "9 – 10:30am", day: "Sunday"}
+                    {header: "Sunday 7.13", p: "associate and scholar remarks", time: "9 – 10:30am", day: "Sunday"}
                   ]
 };
 

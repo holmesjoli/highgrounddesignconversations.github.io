@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { InternalMain } from "../components/Main";
-import { masterDataURL, parseCSV, attendeeInfo } from "../utils/global";
+import { masterDataURL, parseCSV, attendeeInfo, currentYearString } from "../utils/global";
 
 export default function Attendees() {
 
@@ -13,7 +13,7 @@ export default function Attendees() {
         fetch(masterDataURL, {method: 'GET'})
           .then(response => response.text())
           .then(data => {
-            setData(parseCSV(data, 1).filter(d => d["2024"] === "Yes"));
+            setData(parseCSV(data, 1).filter(d => d[currentYearString] === "Yes"));
         })
         .finally(setLoaded(false));
 

@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 
-import { ExternalMain, InternalMain } from "../components/Main";
+import { ExternalMain } from "../components/Main";
 
-import { eventManager } from "../utils/global";
+import { eventManager, currentYear } from "../utils/global";
 
 import Attendees from "./Attendees";
-
-const year = new Date().getFullYear();
 
 function Password({setIsVerified}) {
 
@@ -16,7 +14,7 @@ function Password({setIsVerified}) {
         // gets the current input value
         const answer = document.getElementById("outlined-password-input").value;
     
-        if (answer === `HGDC${year}`) { 
+        if (answer === `HGDC${currentYear}`) { 
         setIsVerified(true);
         } else {
         alert(`Incorrect password. Please try again or reach out to ${eventManager.email} for assistance.}`);
@@ -25,7 +23,7 @@ function Password({setIsVerified}) {
 
     return(
         <div className="Password">
-            <h3>Thank you for making the 2024 HGDC a success! Invitees of HGDC 2024 may still access the conference website using the password emailed to you.</h3>
+            <h3>Thank you for making the 2024 HGDC a success! A new login for HGDC 2025 will be emailed to you in the near future.</h3>
             <TextField
                     id="outlined-password-input"
                     label="Password"
