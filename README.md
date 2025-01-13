@@ -17,4 +17,4 @@ https://medium.com/@madelinecorman/deploying-your-react-app-with-github-pages-an
 
 ## Bug in the Deployment Process
 
-When you push the code it will take down the website, you just have to go and edit the HTML on the `gh-pages`.
+When you push the code it will take down the website, you just have to go and edit the HTML on the [`gh-pages` branch](https://github.com/holmesjoli/highgrounddesignconversations/blob/gh-pages/index.html).
