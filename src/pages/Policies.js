@@ -4,7 +4,7 @@ import { eventManager } from "../utils/global";
 const year = new Date().getFullYear();
 
 const policies = [
-    {header: "RSVP", p: `Please RVSP and send Steve Wilcox the estimated conference fee* of $250 by April 1st, ${year}.`, type: "paragraph"},
+    {header: "RSVP", p: `Please RVSP and send Steve Wilcox the estimated conference fee* of $250 by May 1st, ${year}.`, type: "paragraph"},
     {header: "Cancellation and Refund", p: `HGDC will refund Participants and Associates if event managers (Steven and ${eventManager.managerName}) are notified of cancellation by June 1st, ${year}.`, type: "paragraph"},
     {header: "Emergency Refund", p: "HGDC will refund Participants and Associations if they cannot attend due to an emergency.", type: "paragraph"},
     {header: "", p: "*Conference fee does not include lodging, food, or alcohol. The estimate will change slightly due to the number of people in attendance. In previous years the food fee for the whole conference has been approximately $50 per person.", type: "h6"}
