@@ -23,7 +23,7 @@ function Password({setIsVerified}) {
 
     return(
         <div className="Password">
-            <h3>Thank you for making the 2024 HGDC a success! A new login for HGDC 2025 will be emailed to you in the near future.</h3>
+            <h3>Invitees to HGDC 2025 can now login to see registered participants and the schedule.</h3>
             <TextField
                     id="outlined-password-input"
                     label="Password"
