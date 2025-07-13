@@ -5,16 +5,24 @@ import { resourcesDataURL, parseCSV} from "../utils/global";
 export default function ExternalResources() {
 
     const [data, setData] = useState([]);
+    const [types, setTypes] = useState([]);
     const [loading, setLoaded] = useState(true);
-    const years = [2024, 2023];
+    const [years, setYears] = useState([]);
 
     useEffect(() => {
 
         fetch(resourcesDataURL, {method: 'GET'})
           .then(response => response.text())
-          .then(data => {
-            setData(parseCSV(data));
-        })
+          .then(data=> {
+            const parsedData = parseCSV(data);
+            setData(parsedData);
+    
+            const typeslist = parsedData.map((a) => {return(a.Type)});
+            setTypes([...new Set(typeslist)]);
+
+            const yearslist = parsedData.map((a) => {return(+a.HGDCYear)});
+            setYears([...new Set(yearslist)]);
+            })
         .finally(setLoaded(false));
 
     }, []);
@@ -22,11 +30,12 @@ export default function ExternalResources() {
     return(
         <ExternalMain pageName="Resources">
             <>
-                <p>Books, films, and articles mentioned and referenced during High Ground Design Conversations are listed below. Special thanks to Rick Griffith and Mickey McManus for their careful tracking of these resources throughout the talks, and to Rick Griffith for compiling these resources into an accessible list on <a href="https://bookshop.org/lists/high-ground-book-citations?" target="_blank" className="underline">Bookshop.org.</a></p>
+                <p>Books, films, and articles mentioned and referenced during High Ground Design Conversations are listed below.</p>
                 {years.map((year, i) => {
                     return(
                         <div className="Suggested-Resources" key={i}>
                             <h3 className="Year">{year}</h3>
+                            {/* <h4 className="Type"></h4> */}
                             <div className="Resource">
                                 {data.filter(d => +d.HGDCYear === year).map((d, j) =>
                                     <div className="Text" key={j} >
