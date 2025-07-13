@@ -31,7 +31,7 @@ export default function ExternalResources() {
         <ExternalMain pageName="Resources">
             <>
                 <p>Books, films, and articles mentioned and referenced during High Ground Design Conversations are listed below.</p>
-                {years.map((year, i) => {
+                {years.sort((a, b) => b-a).map((year, i) => {
                     return(
                         <div className="Suggested-Resources" key={i}>
                             <h3 className="Year">{year}</h3>
