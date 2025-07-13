@@ -42,19 +42,38 @@ export default function ExternalResources() {
                                     {data.filter(d => +d.HGDCYear === year).map((d, j) => {
 
                                         if (d.Link === "") {
-                                            return(
-                                                <div className="Text" key={j}>
+                                            if (d.RecommendedBy === "") {
+                                                return(
+                                                    <div className="Text" key={j}>
+                                                        <p><b>{d.ResourceName}</b></p>
+                                                        <p><span>{d.Author}</span></p>
+                                                    </div>
+                                                )
+                                            } else {
+                                                return(
+                                                    <div className="Text" key={j}>
                                                     <p><b>{d.ResourceName}</b> <span> recommended by </span><i>{d.RecommendedBy}</i></p>
                                                     <p><span>{d.Author}</span></p>
                                                 </div>
-                                            )
+                                                ) 
+                                            }
                                         } else {
-                                            return(
-                                                <div className="Text" key={j}>
+
+                                            if (d.RecommendedBy === "") {
+                                                return(
+                                                    <div className="Text" key={j}>
+                                                    <p><a href={d.Link}><b>{d.ResourceName}</b></a></p>
+                                                    <p><span>{d.Author}</span></p>
+                                                </div>
+                                                )
+                                            } else {
+                                                return(
+                                                    <div className="Text" key={j}>
                                                     <p><a href={d.Link}><b>{d.ResourceName}</b></a> <span> recommended by </span><i>{d.RecommendedBy}</i></p>
                                                     <p><span>{d.Author}</span></p>
                                                 </div>
-                                            )
+                                                ) 
+                                            }
                                         }
                                     } 
                                     )}
