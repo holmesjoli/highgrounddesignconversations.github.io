@@ -32,9 +32,9 @@ export default function PastParticipants() {
                     <h3>Speakers</h3>
 
                     {year === 2022 ? 
-                    data.filter(d => d.Level === "Participant" && !(d.LastName === "Fanning" || d.LastName === "Roederer")).filter(d => d.Year === year).map((d, i) => 
+                    data.filter(d => d.Level === "Speaker" && !(d.LastName === "Fanning" || d.LastName === "Roederer")).filter(d => d.Year === year).map((d, i) => 
                     attendeeInfo(d, i, loading)
-                    ): data.filter(d => d.Level === "Participant").filter(d => d.Year === year).map((d, i) => 
+                    ): data.filter(d => d.Level === "Speaker").filter(d => d.Year === year).map((d, i) => 
                     attendeeInfo(d, i, loading))
                     }
                     <h3>Associates</h3>
