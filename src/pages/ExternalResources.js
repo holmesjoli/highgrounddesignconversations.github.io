@@ -33,22 +33,36 @@ export default function ExternalResources() {
                 <p>Books, films, and articles mentioned and referenced during High Ground Design Conversations are listed below.</p>
                 {years.sort((a, b) => b-a).map((year, i) => {
                     return(
-                        <div className="Suggested-Resources" key={i}>
-                            <h3 className="Year">{year}</h3>
-                            {/* <h4 className="Type"></h4> */}
-                            <div className="Resource">
-                                {data.filter(d => +d.HGDCYear === year).map((d, j) =>
-                                    <div className="Text" key={j} >
-                                        <a href={d.Link}>
-                                            <p><b>{d.ResourceName}</b></p>
-                                        </a>
-                                        <p>{d.Author}</p>
-                                    </div>
-                                )}
+                        types.map((type, j) => {
+                        return(
+                            <div className="Suggested-Resources" key={i-j}>
+                                <h3 className="Year">{year}</h3>
+                                {/* <h4 className="Type">{type}</h4> */}
+                                <div className="Resource">
+                                    {data.filter(d => +d.HGDCYear === year).map((d, j) => {
+
+                                        if (d.Link === "") {
+                                            return(
+                                                <div className="Text" key={j}>
+                                                    <p><b>{d.ResourceName}</b> <span> recommended by </span><i>{d.RecommendedBy}</i></p>
+                                                    <p><span>{d.Author}</span></p>
+                                                </div>
+                                            )
+                                        } else {
+                                            return(
+                                                <div className="Text" key={j}>
+                                                    <p><a href={d.Link}><b>{d.ResourceName}</b></a> <span> recommended by </span><i>{d.RecommendedBy}</i></p>
+                                                    <p><span>{d.Author}</span></p>
+                                                </div>
+                                            )
+                                        }
+                                    } 
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    )
-                }
+                        )
+                    }))
+                    }
                 )}
             </>
         </ExternalMain>
