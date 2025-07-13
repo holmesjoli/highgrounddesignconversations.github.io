@@ -39,7 +39,7 @@ function Password({setIsVerified}) {
 function Banner() {
     return(
         <div className="Banner">
-            <p>High Ground Design Conversations 2025 will take place in <span className="bold">Santa Fe</span> from <span className="bold">July 10th - July 13th.</span> Can't wait to see you there!</p>
+            <p>High Ground Design Conversations 2026 will take place in <span className="bold">Santa Fe</span> from <span className="bold">July 9th - July 12th.</span> Can't wait to see you there!</p>
         </div>
     )
 }
