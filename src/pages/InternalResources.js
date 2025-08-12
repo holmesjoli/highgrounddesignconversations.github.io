@@ -5,41 +5,86 @@ import { resourcesDataURL, parseCSV} from "../utils/global";
 export default function InternalResources() {
 
     const [data, setData] = useState([]);
+    const [types, setTypes] = useState([]);
     const [loading, setLoaded] = useState(true);
-    const years = [2024, 2023];
+    const [years, setYears] = useState([]);
 
     useEffect(() => {
 
         fetch(resourcesDataURL, {method: 'GET'})
           .then(response => response.text())
           .then(data => {
-            setData(parseCSV(data));
-        })
+            const parsedData = parseCSV(data);
+            setData(parsedData);
+    
+            const typeslist = parsedData.map((a) => {return(a.Type)});
+            setTypes([...new Set(typeslist)]);
+
+            const yearslist = parsedData.map((a) => {return(+a.HGDCYear)});
+            setYears([...new Set(yearslist)]);
+            })
         .finally(setLoaded(false));
 
     }, []);
 
+    // console.log(data);
+
     return(
         <InternalMain pageName="Resources">
             <>
-                <p>Books, films, and articles mentioned and referenced during High Ground Design Conversations are listed below. Special thanks to Rick Griffith and Mickey McManus for their careful tracking of these resources throughout the talks, and to Rick Griffith for compiling these resources into an accessible list on <a href="https://bookshop.org/lists/high-ground-book-citations?" target="_blank" className="underline">Bookshop.org.</a></p>
-                {years.map((year, i) => {
-                    return(
-                        <div className="Suggested-Resources" key={i}>
-                            <h3 className="Year">{year}</h3>
-                            <div className="Resource">
-                                {data.filter(d => +d.HGDCYear === year).map((d, j) =>
-                                    <div className="Text" key={j} >
-                                        <a href={d.Link}>
-                                            <p><b>{d.ResourceName}</b></p>
-                                        </a>
-                                        <p>{d.Author}</p>
-                                    </div>
-                                )}
+                <p>Books, films, and articles mentioned and referenced during High Ground Design Conversations are listed below.</p>
+                {years.sort((a, b) => b-a).map((year, i) => {
+                    // return(
+                        // types.map((type, j) => {
+                        return(
+                            <div className="Suggested-Resources" key={i}>
+                                <h3 className="Year">{year}</h3>
+                                {/* <h4 className="Type">{type}</h4> */}
+                                <div className="Resource">
+                                    {data.filter(d => +d.HGDCYear === year).map((d, k) => {
+
+                                        if (d.Link === "") {
+                                            if (d.RecommendedBy === "") {
+                                                return(
+                                                    <div className="Text" key={i-k}>
+                                                        <p><b>{d.ResourceName}</b></p>
+                                                        <p><span>{d.Author}</span></p>
+                                                    </div>
+                                                )
+                                            } else {
+                                                return(
+                                                    <div className="Text" key={i-k}>
+                                                    <p><b>{d.ResourceName}</b> <span> recommended by </span><i>{d.RecommendedBy}</i></p>
+                                                    <p><span>{d.Author}</span></p>
+                                                </div>
+                                                ) 
+                                            }
+                                        } else {
+
+                                            if (d.RecommendedBy === "") {
+                                                return(
+                                                    <div className="Text" key={i-k}>
+                                                    <p><a href={d.Link}><b>{d.ResourceName}</b></a></p>
+                                                    <p><span>{d.Author}</span></p>
+                                                </div>
+                                                )
+                                            } else {
+                                                return(
+                                                    <div className="Text" key={i-k}>
+                                                    <p><a href={d.Link}><b>{d.ResourceName}</b></a> <span> recommended by </span><i>{d.RecommendedBy}</i></p>
+                                                    <p><span>{d.Author}</span></p>
+                                                </div>
+                                                ) 
+                                            }
+                                        }
+                                    }
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    )
-                }
+                        )
+                    // }
+                // ))
+                    }
                 )}
             </>
         </InternalMain>
