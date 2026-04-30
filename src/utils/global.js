@@ -1,7 +1,7 @@
 import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
 
-export const eventManager = {managerName: "Joli Holmes", phone: "206.915.0891", email: "holmesjoli@gmail.com"}
+export const eventManager = {managerName: "Leo Sailas", phone: "303.990.0127", email: "leo.sailas.art@gmail.com"}
 export const gateCode = "1966";
 export const eventAddress = '171 County Road 74 Santa Fe, NM 85706';
 export const masterDataURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQLFdoeX9Ji5UFLRpbCifTuKuX3wSMn7eo9rAjGSmP6mtAJ235-cNIUSti7W8NuMpb85veexDB6NzGU/pub?output=tsv';
