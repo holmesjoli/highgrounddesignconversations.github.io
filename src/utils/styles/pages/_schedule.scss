@@ -1,13 +1,27 @@
 .Schedule .Content .Text {
     display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    margin: .3rem 0;
+    grid-template-columns: 1fr auto;
     grid-gap: 1.5rem;
+    margin: .3rem 0;
+    align-items: center;
 }
 
 .Schedule .Content .Text h4 {
+    grid-column: 1 / -1;
     text-align: left;
+    margin: 0;
+}
+
+.Schedule .Content .Text p {
+    margin: 0;
+}
+
+.Schedule .Content .Text p:nth-of-type(1) {
+    justify-self: start;
+}
+
+.Schedule .Content .Text p:nth-of-type(2) {
+    justify-self: end;
 }
 
 .Day {
@@ -34,7 +48,7 @@
         }
 
         .Content .Text {
-            grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+            grid-template-columns: 1fr auto;
             grid-gap: 1rem;
         }
     }
