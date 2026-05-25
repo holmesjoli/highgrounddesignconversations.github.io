@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 
 import { ExternalMain } from "../components/Main";
 
-import { eventManager, currentYear } from "../utils/global";
+import { eventManager, currentYear, currentYearString } from "../utils/global";
 
 import Participants from "./Participants";
 
@@ -23,7 +23,7 @@ function Password({setIsVerified}) {
 
     return(
         <div className="Password">
-            <h3>Invitees to HGDC 2025 can now login to see registered participants and the schedule.</h3>
+            <h3>Invitees to HGDC {currentYearString} can now login to see registered participants and the schedule.</h3>
             <TextField
                     id="outlined-password-input"
                     label="Password"
